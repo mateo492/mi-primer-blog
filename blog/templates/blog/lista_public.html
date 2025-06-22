@@ -1,61 +1,92 @@
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
-    <title>Blog del profe Jorge</title>
+    <meta charset="UTF-8">
+    <title>Películas de Comedia</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
     <style>
-        .filtro-usuarios {
-            margin: 15px 0;
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Segoe UI', sans-serif;
+            padding-top: 30px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #333;
+        }
+
+        .movie-card {
+            margin-bottom: 30px;
+        }
+
+        .panel {
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        .panel-heading {
+            font-size: 18px;
+            font-weight: bold;
+            background-color: #007bff !important;
+            color: white !important;
+        }
+
+        .panel-body {
             padding: 10px;
-            background: #f0f0f0;
         }
-        .usuario-filtro {
-            display: inline-block;
-            margin-right: 10px;
-            padding: 5px 10px;
-            background: #e0e0e0;
-            border-radius: 3px;
+
+        .panel-body p {
+            margin-top: 10px;
         }
-        .usuario-filtro.activo {
-            background: #4CAF50;
-            color: white;
-        }
-        .limpiar-filtro {
-            display: inline-block;
-            margin-left: 10px;
-            color: #666;
+
+        img {
+            border-radius: 4px;
         }
     </style>
 </head>
 <body>
-    <div style="background: red;">
-        <h1><a href="/">Blog del profe Jorge</a></h1>
+    <div class="container">
+        <h1>Películas de Comedia</h1>
+        <div class="row">
+
+            <!-- TED -->
+            <div class="col-sm-4 movie-card">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Ted (2012)</div>
+                    <div class="panel-body text-center">
+                        <img src="https://image.tmdb.org/t/p/w500/7jRkM0nD2BVr5y4O4F9mN5YzN0A.jpg" class="img-responsive center-block" alt="Ted">
+                        <p>Un oso de peluche cobra vida y se convierte en el mejor (y peor) amigo de su dueño.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TED 2 -->
+            <div class="col-sm-4 movie-card">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Ted 2 (2015)</div>
+                    <div class="panel-body text-center">
+                        <img src="https://image.tmdb.org/t/p/w500/rwO9y2lXpnilZ5kzbWydyJeX92z.jpg" class="img-responsive center-block" alt="Ted 2">
+                        <p>Ted quiere tener un hijo, pero antes debe probar que es legalmente una persona.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Son como niños -->
+            <div class="col-sm-4 movie-card">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Son como niños (2010)</div>
+                    <div class="panel-body text-center">
+                        <img src="https://image.tmdb.org/t/p/w500/fd6Ty2HZk6lYg4VZCrpWhFqevpX.jpg" class="img-responsive center-block" alt="Son como niños">
+                        <p>Un grupo de amigos se reúne con sus familias y revive su infancia entre risas y caos.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
-    <!-- Filtro por usuario usando enlaces -->
-    <div class="filtro-usuarios">
-    <strong>Filtrar por autor:</strong>
-   
-    <!-- Opción "Todos" -->
-    <a href="?" class="usuario-filtro {% if not usuario_activo %}activo{% endif %}">
-        Todos
-    </a>
-   
-    <!-- Opciones por usuario -->
-    {% for usuario in usuarios %}
-        <a href="?usuario={{ usuario.id }}"
-           class="usuario-filtro {% if usuario_activo == usuario.id %}activo{% endif %}">
-            {{ usuario.username }}
-        </a>
-    {% endfor %}
-   </div>
-
-   <!-- Lista de publicaciones -->
-
-   <div>
-    {% for publicacion in publicaciones %}
-    <p>Publicado: {{ publicacion.fecha_publicacion }} por autor/a: {{ publicacion.autor.username }} </p>
-    <h2> <a href=""> {{publicacion.titulo}} </a> </h2>
-    <p> {{ publicacion.texto|linebreaksbr }} </p>
-    <hr>    
-    {% endfor %}
-   </div>
 </body>
 </html>
