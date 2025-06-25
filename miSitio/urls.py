@@ -6,4 +6,3 @@ urlpatterns = [
     path('evaluacion2/', include('blog.urls')),
 ]
 
-
