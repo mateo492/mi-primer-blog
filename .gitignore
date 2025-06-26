@@ -5,3 +5,8 @@ miEntV
 db.sqlite3
 /static
 .DS_Store
+venv
+# No subir claves ni resource-forks
+ssh/
+._*
+*.DS_Store
