@@ -3,20 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>Películas de Comedia</title>
-    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
     <style>
-        body {
-            background-color: #f8f9fa;
+         body {
+            background-image: url("img/fondo_cine.png");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
             font-family: 'Segoe UI', sans-serif;
             padding-top: 30px;
+            color: white;
         }
 
         h1 {
             text-align: center;
             margin-bottom: 40px;
-            color: #333;
+            color: #ffffff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
         }
 
         .movie-card {
@@ -24,8 +29,10 @@
         }
 
         .panel {
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            background-color: rgba(0, 0, 0, 0.75);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
             border-radius: 8px;
+            color: white;
         }
 
         .panel-heading {
@@ -33,6 +40,8 @@
             font-weight: bold;
             background-color: #007bff !important;
             color: white !important;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
         }
 
         .panel-body {
@@ -41,10 +50,14 @@
 
         .panel-body p {
             margin-top: 10px;
+            font-size: 14px;
         }
 
         img {
             border-radius: 4px;
+            max-width: 100%;
+            width: 220px;
+            height: auto;
         }
     </style>
 </head>
@@ -58,8 +71,8 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">Ted (2012)</div>
                     <div class="panel-body text-center">
-                        <img src="https://image.tmdb.org/t/p/w500/7jRkM0nD2BVr5y4O4F9mN5YzN0A.jpg" class="img-responsive center-block" alt="Ted">
-                        <p>Un oso de peluche cobra vida y se convierte en el mejor (y peor) amigo de su dueño.</p>
+                        <img src="img/ted.png" alt="Ted">
+                        <p>John Bennett pide de niño que su oso de peluche cobre vida... ¡y sucede! Años después, Ted sigue siendo su mejor amigo, pero también un desastre total. Una comedia irreverente con humor adulto y situaciones absurdas.</p>
                     </div>
                 </div>
             </div>
@@ -69,8 +82,8 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">Ted 2 (2015)</div>
                     <div class="panel-body text-center">
-                        <img src="https://image.tmdb.org/t/p/w500/rwO9y2lXpnilZ5kzbWydyJeX92z.jpg" class="img-responsive center-block" alt="Ted 2">
-                        <p>Ted quiere tener un hijo, pero antes debe probar que es legalmente una persona.</p>
+                        <img src="img/ted2.png" alt="Ted 2">
+                        <p>Ahora casado, Ted quiere formar una familia. Pero el gobierno lo obliga a demostrar que es una persona real. Junto a su amigo John y una abogada, emprende una batalla legal con mucho humor y locuras.</p>
                     </div>
                 </div>
             </div>
@@ -80,8 +93,41 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">Son como niños (2010)</div>
                     <div class="panel-body text-center">
-                        <img src="https://image.tmdb.org/t/p/w500/fd6Ty2HZk6lYg4VZCrpWhFqevpX.jpg" class="img-responsive center-block" alt="Son como niños">
-                        <p>Un grupo de amigos se reúne con sus familias y revive su infancia entre risas y caos.</p>
+                        <img src="img/son_como_ninos.png" alt="Son como niños">
+                        <p>Un grupo de amigos de la infancia se reencuentra tras la muerte de su entrenador. Con sus familias, pasan un fin de semana en una casa de lago donde reviven su niñez con juegos, bromas y muchas situaciones ridículas.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Son como niños 2 -->
+            <div class="col-sm-4 movie-card">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Son como niños 2 (2013)</div>
+                    <div class="panel-body text-center">
+                        <img src="img/son_como_ninos2.png" alt="Son como niños 2">
+                        <p>Los protagonistas ahora viven en la misma ciudad, pero la vida adulta no es tan simple. Entre fiestas escolares, entrenadores locos y viejos enemigos, el caos vuelve... ¡y la risa también!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ¿Qué pasó ayer? -->
+            <div class="col-sm-4 movie-card">
+                <div class="panel panel-default">
+                    <div class="panel-heading">¿Qué pasó ayer? (2009)</div>
+                    <div class="panel-body text-center">
+                        <img src="img/que_paso_ayer.png" alt="¿Qué pasó ayer?">
+                        <p>Después de una noche de fiesta salvaje en Las Vegas, tres amigos se despiertan sin recuerdos... y el novio ha desaparecido. Tienen que reconstruir la noche más loca de sus vidas. Una comedia delirante y sorprendente.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ¿Qué pasó ayer? Parte II -->
+            <div class="col-sm-4 movie-card">
+                <div class="panel panel-default">
+                    <div class="panel-heading">¿Qué pasó ayer? Parte II (2011)</div>
+                    <div class="panel-body text-center">
+                        <img src="img/que_paso_ayer2.png" alt="¿Qué pasó ayer? Parte II">
+                        <p>Esta vez en Tailandia, los amigos intentan celebrar una boda tranquila, pero todo sale mal (otra vez). Se despiertan en Bangkok con resaca, tatuajes, un mono y más preguntas sin respuestas.</p>
                     </div>
                 </div>
             </div>
