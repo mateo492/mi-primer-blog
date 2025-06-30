@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Películas de Comedia</title>
+  <link rel="stylesheet"
+        href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+</head>
+<body>
+  <div class="container">
+    <h1>Películas de Comedia</h1>
+    <div class="row">
+      {% for p in peliculas %}
+        <div class="col-sm-4 movie-card">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              {{ p.titulo }} ({{ p.anio }})
+            </div>
+            <div class="panel-body text-center">
+              <img src="{{ p.imagen_url }}" alt="{{ p.titulo }}">
+              <p>{{ p.sinopsis }}</p>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</body>
+</html>

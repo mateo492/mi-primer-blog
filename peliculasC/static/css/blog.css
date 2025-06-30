@@ -1,0 +1,88 @@
+/* ----------  VARIABLES  ---------- */
+:root{
+  --ob-bg:#f5f7fa;
+  --ob-primary:#0095ff;
+  --ob-text:#333;
+  --ob-card-bg:#fff;
+}
+
+/* ----------  ESTILO GENERAL  ---------- */
+body{
+  background:var(--ob-bg);
+  font-family:'Helvetica Neue',Arial,sans-serif;
+  color:var(--ob-text);
+}
+
+h1{
+  margin:40px 0 30px;
+  text-align:center;
+  color:var(--ob-primary);
+  font-weight:700;
+  letter-spacing:1px;
+}
+
+/* ----------  TARJETA  ---------- */
+.movie-card{
+  margin-bottom:30px;
+}
+
+.movie-card .panel{
+  border:none;
+  border-radius:8px;
+  background:var(--ob-card-bg);
+  box-shadow:0 2px 6px rgba(0,0,0,.08);
+  transition:transform .2s;
+}
+.movie-card .panel:hover{
+  transform:translateY(-4px);
+}
+
+/* ----------  ENCABEZADO  ---------- */
+.panel-heading{
+  background:var(--ob-primary);
+  color:#fff;
+  font-weight:600;
+  text-align:center;
+  padding:12px 8px;
+  font-size:16px;
+}
+
+/* ----------  CONTENIDO  ---------- */
+/* 1️⃣  Flexbox: texto ⬅️ | imagen ➡️                             */
+.panel-body{
+  display:flex;
+  flex-direction:row-reverse;   /* coloca la imagen a la derecha */
+  align-items:flex-start;
+  gap:16px;                     /* espacio entre imagen y texto  */
+  padding:16px 20px 20px;
+}
+
+/* 2️⃣  Imagen vertical (retrato)                                 */
+.panel-body img{
+  width:140px;      /* ancho fijo para mantener forma vertical */
+  height:100%;      /* toma todo el alto del contenedor        */
+  object-fit:cover; /* recorta sin deformar                    */
+  border-radius:4px;
+}
+
+/* 3️⃣  Texto                                                     */
+.panel-body p{
+  flex:1;                      /* ocupa todo el espacio libre   */
+  font-size:14px;
+  line-height:1.45;
+  margin:0;
+}
+
+/* ----------  RESPONSIVE  ---------- */
+/* En pantallas pequeñas (≤ 575 px) volver a apilar vertical     */
+@media (max-width:575px){
+  .panel-body{
+    flex-direction:column;
+    text-align:center;
+  }
+  .panel-body img{
+    width:100%;
+    height:220px;
+    margin:0 0 12px;
+  }
+}
